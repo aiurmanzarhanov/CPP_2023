@@ -2,15 +2,19 @@
 
 using namespace std;
 
-int main() {
-    setlocale(0,"Russian");
-    double a,b,c;
-    cout<<"Введите первое число:";
-    cin>>a;
-    cout<<"Введите второе число:";
-    cin>>b;
-    c=(a+b)*(a+b);
-    cout<<"Квадрат суммы чисел равен:"<<c;
+int squared_sum(double a, double b){
+	    double c;
+	    c = (a + b)*(a+b);
+	    return c;
+}
 
-    return 0;
+int main(){
+	setlocale(0, "Russian");
+	double a, b;
+	cout<<"Введите первое число:";
+	cin>>a;
+	cout<<"Введите второе число:";
+	cin>>b;
+	cout<<"Квадрат суммы чисел равен:"<<squared_sum(a, b);
+	return 0;
 }
